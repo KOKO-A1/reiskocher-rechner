@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍚 Reiskocher-Rechner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🍚 Reiskocher-Rechner</h1>
+
+    <div class="card">
+
+        <label for="reis">Reissorte</label>
+
+        <select id="reis">
+            <option value="1.25|WHITE">Weißer Reis</option>
+            <option value="1.75|BROWN">Vollkornreis</option>
+            <option value="1.25|SUSHI">Sushi-Reis</option>
+            <option value="1.25|SUSHI">Klebreis</option>
+            <option value="2.00|QUINOA/STANDARD">Quinoa</option>
+            <option value="1.50|GRAIN/STANDARD">Bulgur</option>
+            <option value="2.00|GRAIN/STANDARD">Getreide</option>
+        </select>
+
+        <label for="gramm">Gramm</label>
+
+        <input
+            id="gramm"
+            type="number"
+            placeholder="z.B. 165">
+
+    </div>
+
+    <div class="ergebnis">
+
+        <h2>Ergebnis</h2>
+
+        <p>🍚 Reisbecher</p>
+        <h3 id="reisbecher">0,00</h3>
+
+        <p>💧 Wasserbecher</p>
+        <h3 id="wasserbecher">0,00</h3>
+
+        <p>⚙️ Modus</p>
+        <h3 id="modus">WHITE</h3>
+
+    </div>
+
+    <footer>
+        130 g = 1 Reisbecher
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
