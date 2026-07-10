@@ -2,9 +2,9 @@ const reis = document.getElementById("reis");
 const gramm = document.getElementById("gramm");
 
 const reisbecher = document.getElementById("reisbecher");
-const wasserbecher = document.getElementById("wasserbecher");
-const modus = document.getElementById("modus");
+const wasseranzeige = document.getElementById("wasseranzeige");
 const wasserml = document.getElementById("wasserml");
+const modus = document.getElementById("modus");
 
 function berechnen() {
 
@@ -12,8 +12,7 @@ function berechnen() {
 
     if (isNaN(grammWert) || grammWert <= 0) {
         reisbecher.textContent = "0,00";
-        wasserbecher.textContent = "0,00";
-        wasserml.textContent = "0 ml";
+        wasseranzeige.innerHTML = '0,00 Becher <span id="wasserml">(≈ 0 ml)</span>';
         modus.textContent = "-";
         return;
     }
@@ -30,8 +29,11 @@ function berechnen() {
     console.log(mlWasser);
 
     reisbecher.textContent = cupsReis.toFixed(2).replace(".", ",");
-    wasserbecher.textContent = cupsWasser.toFixed(2).replace(".", ",");
-    wasserml.textContent = Math.round(mlWasser) + " TEST";
+    wasseranzeige.innerHTML =
+        cupsWasser.toFixed(2).replace(".", ",") +
+        " Becher <span>(≈ " +
+        Math.round(mlWasser) +
+        " ml)</span>";
     modus.textContent = programm;
 }
 
