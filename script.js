@@ -31,7 +31,7 @@ function berechnen() {
 
     reisbecher.textContent = cupsReis.toFixed(2).replace(".", ",");
     wasserbecher.textContent = cupsWasser.toFixed(2).replace(".", ",");
-    wasserml.textContent = Math.round(mlWasser) + " ml";
+    wasserml.textContent = Math.round(mlWasser) + " TEST";
     modus.textContent = programm;
 }
 
