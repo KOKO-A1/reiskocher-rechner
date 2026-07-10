@@ -26,6 +26,8 @@ function berechnen() {
     const cupsReis = grammWert / 130;
     const cupsWasser = cupsReis * faktor;
     const mlWasser = cupsWasser * 150;
+    console.log(cupsWasser);
+    console.log(mlWasser);
 
     reisbecher.textContent = cupsReis.toFixed(2).replace(".", ",");
     wasserbecher.textContent = cupsWasser.toFixed(2).replace(".", ",");
