@@ -35,3 +35,5 @@ function berechnen() {
 
 gramm.addEventListener("input", berechnen);
 reis.addEventListener("change", berechnen);
+
+berechnen();
